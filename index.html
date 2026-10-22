@@ -92,39 +92,43 @@
 
   .card {
     background: var(--paper);
-    border: 1px solid var(--rule);
+    border: 2px solid var(--accent);
     border-radius: 18px;
-    padding: 26px 28px;
+    padding: 30px 32px;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 16px;
+    box-shadow: 0 14px 32px -18px rgba(0,0,0,0.4);
   }
 
   .card h1 {
     font-family: "Fraunces", Georgia, serif;
-    font-weight: 600;
-    font-size: clamp(22px, 5vw, 28px);
-    line-height: 1.25;
+    font-weight: 700;
+    font-size: clamp(26px, 6.5vw, 36px);
+    line-height: 1.2;
     margin: 0;
     text-wrap: balance;
   }
 
   .card p {
     font-family: "Space Grotesk", "Segoe UI", sans-serif;
-    font-size: 15px;
-    line-height: 1.6;
-    color: var(--ink-soft);
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--ink);
     margin: 0;
     max-width: 65ch;
   }
 
   .card p strong {
-    color: var(--ink);
-    font-weight: 600;
+    color: var(--accent-ink);
+    background: color-mix(in srgb, var(--accent) 30%, transparent);
+    padding: 0 4px;
+    border-radius: 4px;
+    font-weight: 700;
   }
 
   .cta {
-    margin-top: 4px;
+    margin-top: 6px;
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -132,17 +136,18 @@
     background: var(--accent);
     color: var(--accent-ink);
     font-family: "Space Grotesk", "Segoe UI", sans-serif;
-    font-weight: 600;
-    font-size: 15px;
+    font-weight: 700;
+    font-size: 17px;
     text-decoration: none;
-    padding: 12px 20px;
+    padding: 15px 26px;
     border-radius: 999px;
+    box-shadow: 0 10px 22px -10px rgba(0,0,0,0.45);
     transition: transform 0.15s ease;
   }
 
-  .cta:hover { transform: translateY(-1px); }
+  .cta:hover { transform: translateY(-2px); }
 
-  .cta svg { width: 16px; height: 16px; flex: none; }
+  .cta svg { width: 18px; height: 18px; flex: none; }
 
   .footnote {
     text-align: center;
@@ -165,11 +170,11 @@
   </figure>
 
   <div class="card">
-    <h1>Désolé, on n'a pas pu choper tous tes papiers administratifs 😅</h1>
+    <h1>Désolé, on n'a pas réussi à récupérer tous tes papiers administratifs 😅</h1>
     <p>
-      Entre deux coups de fil et trois photocopies perdues, il nous en manque quelques-uns.
-      Mais pas de panique : <strong>direction le site officiel</strong> pour lancer tes démarches
-      et récupérer ta carte verte sans plus attendre.
+      Entre deux coups de fil et des photocopies égarées, il nous en manque encore quelques-uns.
+      Alors on t'invite à <strong>aller sur le site officiel</strong> pour commencer tes démarches
+      toi-même et récupérer ta carte verte sans plus attendre.
     </p>
     <a class="cta" href="https://www.service-public.fr" target="_blank" rel="noopener">
       Commencer mes démarches
