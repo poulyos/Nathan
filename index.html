@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pack Carte Verte</title>
+<style>
+  /* Layout: full-bleed hero photo with confetti, message card floats below on a soft paper ground */
+  :root {
+    --bg: #fdf8ee;
+    --paper: #ffffff;
+    --ink: #2b2410;
+    --ink-soft: #6b6148;
+    --accent: #e8a33d;
+    --accent-ink: #7a4a0a;
+    --rule: #e8dec4;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1c1810;
+      --paper: #262016;
+      --ink: #f3ecda;
+      --ink-soft: #baaf92;
+      --accent: #f0b753;
+      --accent-ink: #2a1a04;
+      --rule: #3a3222;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1c1810;
+    --paper: #262016;
+    --ink: #f3ecda;
+    --ink-soft: #baaf92;
+    --accent: #f0b753;
+    --accent-ink: #2a1a04;
+    --rule: #3a3222;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body { margin: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Fraunces", Georgia, "Times New Roman", serif;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 28px 56px;
+  }
+
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .eyebrow {
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    background: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  figure {
+    margin: 0;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 18px 40px -20px rgba(0,0,0,0.45);
+    border: 1px solid var(--rule);
+  }
+
+  figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 18px;
+    padding: 26px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .card h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(22px, 5vw, 28px);
+    line-height: 1.25;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .card p {
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin: 0;
+    max-width: 65ch;
+  }
+
+  .card p strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .cta {
+    margin-top: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    align-self: flex-start;
+    background: var(--accent);
+    color: var(--accent-ink);
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 999px;
+    transition: transform 0.15s ease;
+  }
+
+  .cta:hover { transform: translateY(-1px); }
+
+  .cta svg { width: 16px; height: 16px; flex: none; }
+
+  .footnote {
+    text-align: center;
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    font-size: 12px;
+    color: var(--ink-soft);
+    letter-spacing: 0.02em;
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Space+Grotesk:wght@400;500;600&display=swap">
+</head>
+<body>
+<main>
+  <span class="eyebrow">🎉 Pack carte verte</span>
+
+  <figure>
+    <img src="photo.jpg" alt="Montage photo d'anniversaire avec Jonathan au centre, entouré de Paul, Tom, Franz, Bruno, Stéphane, Thomas et Marvin, avec le texte Félicitation tu viens de recevoir ton pack carte verte">
+  </figure>
+
+  <div class="card">
+    <h1>Désolé, on n'a pas pu choper tous tes papiers administratifs 😅</h1>
+    <p>
+      Entre deux coups de fil et trois photocopies perdues, il nous en manque quelques-uns.
+      Mais pas de panique : <strong>direction le site officiel</strong> pour lancer tes démarches
+      et récupérer ta carte verte sans plus attendre.
+    </p>
+    <a class="cta" href="https://www.service-public.fr" target="_blank" rel="noopener">
+      Commencer mes démarches
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+    </a>
+  </div>
+
+  <p class="footnote">Avec toute notre affection, Jonathan, Paul, Tom, Franz, Bruno, Stéphane, Thomas &amp; Marvin</p>
+</main>
+</body>
+</html>
